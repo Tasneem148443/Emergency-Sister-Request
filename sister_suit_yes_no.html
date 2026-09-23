@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🥹🤍</title>
+<style>
+*{box-sizing:border-box}body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:#fceef5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}
+.card{background:white;width:min(90%,520px);padding:42px 25px;border-radius:28px;text-align:center;box-shadow:0 15px 45px #0001}
+.emoji{font-size:55px}.q{font-size:27px;font-weight:700;margin:20px 0 30px;color:#4b3440}
+button{border:0;border-radius:999px;padding:14px 30px;font-size:18px;font-weight:700;cursor:pointer;transition:.15s}
+#yes{background:#e89ab7;color:white;margin-right:10px}#no{background:#eee;color:#555;position:relative}
+#yay{display:none;font-size:25px;font-weight:700;color:#d96f9a}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="emoji">🥹🤍</div>
+<div class="q">Can I wear your new suit tomorrow?</div>
+<div id="buttons">
+<button id="yes" onclick="yes()">YES 💗</button>
+<button id="no" onmouseenter="escapeNo()" ontouchstart="escapeNo()">NO 😭</button>
+</div>
+<div id="yay">YAAAAY 😭💗<br><small>Thank youuu, I’ll take care of it! 🥹</small></div>
+</div>
+<script>
+const no=document.getElementById('no');
+function escapeNo(){
+ const x=Math.random()*220-110, y=Math.random()*180-90;
+ no.style.transform=`translate(${x}px,${y}px)`;
+}
+function yes(){
+ document.getElementById('buttons').style.display='none';
+ document.getElementById('yay').style.display='block';
+}
+</script>
+</body>
+</html>
